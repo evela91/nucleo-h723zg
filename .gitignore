@@ -1,16 +1,13 @@
-# Prerequisites
-*.d
-
 # Object files
 *.o
 *.ko
 *.obj
 *.elf
+*.elf.launch
+*.launch
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# exclude algorithm. Must be linked from seperate repo info this path
+AnchorOS/Algorithm
 
 # Precompiled Headers
 *.gch
@@ -39,14 +36,32 @@
 # Debug files
 *.dSYM/
 *.su
-*.idb
-*.pdb
+._Debug
+.settings/
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Build Intermidiate files
+*.list
+*.map
+
+# TrueStudio build prefs
+*.managedbuilder.core.prefs
+*settings.xml
+
+# ignore all generator files
+generator/*
+# BUT the generator config file
+!generator/AnchorOS.ioc
+
+#MacOs
+.DS_Store
+
+# Add CMSIS library
+!AnchorOS/Drivers/CMSIS/Lib/*/*.a
+!AnchorOS/Drivers/CMSIS/Lib/*/*.lib
+
+# automatically generated folders and make-files
+*/Debug/*
+*/Release/*
+.metadata/*
+*.mk
+/.metadata/
