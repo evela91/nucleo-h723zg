@@ -52,8 +52,9 @@ generator/*
 # BUT the generator config file
 !generator/AnchorOS.ioc
 
-#MacOs
+# MacOS litter
 .DS_Store
+._*
 
 # Add CMSIS library
 !AnchorOS/Drivers/CMSIS/Lib/*/*.a
